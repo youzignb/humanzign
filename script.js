@@ -34,9 +34,9 @@ function addHead(src, x, y,w,h) {
     let image = new Image();
     image.src = src;
     image.onload = function() {
-        // ctx.fillStyle = "white";
-        // ctx.fillRect(150,40,210,188); //clear the canvas by drawing a rectangle
-        ctx.clearRect(150,40,210,188);
+        
+        // ctx.clearRect(150,40,210,188);
+        ctx.clearRect(0,0,canvas.width,canvas.height);
         ctx.drawImage(image, x, y,w,h); //draw image
     }
 }
@@ -46,7 +46,8 @@ function addBody(src, x, y,w,h) {
     let image = new Image();
     image.src = src;
     image.onload = function() {
-        ctx.clearRect(150,40,210,188); //clear the canvas by drawing a rectangle
+        ctx.clearRect(50,218,400,392);
+
         ctx.drawImage(image, x, y,w,h); //draw image
     }
 }
@@ -55,6 +56,7 @@ function addBody(src, x, y,w,h) {
 //createHead: pass the attributes for addHead to the createHead function
 function createHead() {
     addHead(head, 155, 30,200,200);
+   
 }
 
 //createBody: pass the attributes for addBody to the createBody function
@@ -73,7 +75,6 @@ document.getElementById("head2").addEventListener("click", function () {
 });
 
 // when clicking on head1, load head1 on canvas
-//not pretty, image sizes need to be adjusted
 document.getElementById("head1").addEventListener("click", function () {
     head = "/images/head/head1.png";
     createHead();
@@ -81,7 +82,6 @@ document.getElementById("head1").addEventListener("click", function () {
 });
 
 // when clicking on head3, load head3 on canvas
-//not pretty, image sizes need to be adjusted
 document.getElementById("head3").addEventListener("click", function () {
     head = "/images/head/head3.png";
     createHead();

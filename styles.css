@@ -1,3 +1,16 @@
+.head, .body. .feet 
+{
+    width: 50wv;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.sidebar
+{
+    width: 50vw;
+}
+
+
 #head1,
 #head2,
 #head3 {
@@ -18,4 +31,7 @@
 
 #canvas {
     border: 1px solid black;
+    position: fixed;
+    right: 0;
+    top: 0;
 }
