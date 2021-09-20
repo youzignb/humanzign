@@ -1,0 +1,21 @@
+#head1,
+#head2,
+#head3 {
+    width:100px;
+}
+
+#body1,
+#body2,
+#body3 {
+    width:150px;
+}
+
+#feet1,
+#feet2,
+#feet3 {
+    height:150px;
+}
+
+#canvas {
+    border: 1px solid black;
+}
