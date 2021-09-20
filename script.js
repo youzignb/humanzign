@@ -1,9 +1,9 @@
 console.log("hello world");
 
-//get element id for the frame and call it canvas so we can manipulate it in JS
+//DECLARE CANVAS get element id for the frame and call it canvas so we can manipulate it in JS
 const canvas = document.getElementById("canvas");
 
-//create the 2d context for canvas
+//2D CONTEXT the 2d context for canvas
 const ctx = canvas.getContext("2d");
 
 // write hello world
@@ -34,8 +34,9 @@ function addHead(src, x, y,w,h) {
     let image = new Image();
     image.src = src;
     image.onload = function() {
-        ctx.fillStyle = "white";
-        ctx.fillRect(150,40,210,188); //clear the canvas by drawing a rectangle
+        // ctx.fillStyle = "white";
+        // ctx.fillRect(150,40,210,188); //clear the canvas by drawing a rectangle
+        ctx.clearRect(150,40,210,188);
         ctx.drawImage(image, x, y,w,h); //draw image
     }
 }
@@ -45,22 +46,13 @@ function addBody(src, x, y,w,h) {
     let image = new Image();
     image.src = src;
     image.onload = function() {
-        ctx.fillStyle = "white";
-        ctx.fillRect(50,218,400,392); //clear the canvas by drawing a rectangle
+        ctx.clearRect(150,40,210,188); //clear the canvas by drawing a rectangle
         ctx.drawImage(image, x, y,w,h); //draw image
     }
 }
-
-// //BUGGY ADDFEET define the function that adds an image at a particular position
-// function addFeet(src, x, y,w,h) {
-//     let image = new Image();
-//     image.src = src;
-//     image.onload = function() {
-//         ctx.fillStyle = "red";
-//         ctx.fillRect(-50, 470, 600, 420); //clear the canvas by drawing a rectangle
-//         ctx.drawImage(image, x, y,w,h); //draw image
-//     }
-// }
+function removeHead () {
+   //remove the head
+}
 
 //createHead: pass the attributes for addHead to the createHead function
 function createHead() {
@@ -72,10 +64,6 @@ function createBody() {
     addBody(body, 50, 210,400,400);
 }
 
-// //BUGGY createFeet: pass the attributes for addFeet to the createFeet function
-// function createFeet() {
-//     addFeet(feet, 50, 470, 600, 420);
-// }
 
 ///HEAD
 
@@ -83,6 +71,7 @@ function createBody() {
 document.getElementById("head2").addEventListener("click", function () {
     head = "/images/head/head2.png";
     createHead();
+    removeHead();
 
 });
 
@@ -125,25 +114,10 @@ document.getElementById("body3").addEventListener("click", function () {
 
 });
 
-// //BUGGY FEET
 
-// // when clicking on feet1, load feet1 on canvas
-// document.getElementById("feet1").addEventListener("click", function () {
-//     body = "/images/feet/feet1.png";
-//     createFeet();
 
-// });
 
-// // when clicking on feet1, load feet1 on canvas
-// document.getElementById("feet2").addEventListener("click", function () {
-//     body = "/images/feet/feet2.png";
-//     createFeet();
-
-// });
-
-//Create a URL and Opens the canvas as an image in a new window
-//doesnt work, the site needs to be live maybe to create a URL  ?
-
+//DOWNLOAD
 // var button = document.getElementById('btn-download');
 // button.addEventListener('click', function (e) {
 //     var dataURL = canvas.toDataURL('image/png');
