@@ -50,9 +50,7 @@ function addBody(src, x, y,w,h) {
         ctx.drawImage(image, x, y,w,h); //draw image
     }
 }
-function removeHead () {
-   //remove the head
-}
+
 
 //createHead: pass the attributes for addHead to the createHead function
 function createHead() {
@@ -71,7 +69,6 @@ function createBody() {
 document.getElementById("head2").addEventListener("click", function () {
     head = "/images/head/head2.png";
     createHead();
-    removeHead();
 
 });
 
