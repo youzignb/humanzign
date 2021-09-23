@@ -97,6 +97,15 @@ nav a:visited {
   row-gap: 30px;
 }
 
+.head,
+.face,
+.body,
+.feet {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
 /* Canvas (right) */
 
 #canvas {
