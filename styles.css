@@ -1,37 +1,142 @@
-.head, .body. .feet 
-{
-    width: 50wv;
-    overflow-x: auto;
-    white-space: nowrap;
+/* MAIN LAYOUT  */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* reset styles */
 }
 
-.sidebar
-{
-    width: 50vw;
+h1 {
+  font-size: x-large;
 }
 
+h2 {
+  font-size: large;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  margin-left: auto;
+  margin-right: auto;
+  row-gap: 10px;
+  width: 1140px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.button {
+  cursor: pointer;
+  padding: 13px 25px;
+  background-color: #111111;
+  color: white;
+  font-size: 1em;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background-color: rgb(39, 39, 39);
+}
+button:focus {
+}
+button:active {
+}
+button:visited {
+}
+
+/* //Drawing area (aside + canvas) */
+main {
+  display: flex;
+  padding: 20px;
+  column-gap: 100px;
+
+  /* the main includes aside and canvas */
+}
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Sidebar (left) */
+aside {
+  display: grid;
+  align-content: start;
+  row-gap: 30px;
+}
+
+nav {
+  color: #767676;
+  font-size: smaller;
+}
+nav a:link {
+  color: ##767676;
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: #777;
+}
+
+.components {
+  display: grid;
+  row-gap: 30px;
+}
+
+/* Canvas (right) */
+
+#canvas {
+  border: 3px double #f9f9f9;
+  /* canvas has a width of 100% unless < 600px , will take width in html */
+}
+
+.canvas {
+  flex: 1 0 auto;
+  /* canvas grows, doesnt shrink and auto resizes */
+}
+
+/* Footer */
+
+footer {
+  font-size: smaller;
+  color: #cccccc;
+  justify-self: center;
+}
+
+@media (max-width: 600px) {
+  footer {
+    justify-self: start;
+    padding-left: 20px;
+  }
+}
+
+/* Components (need to find a better way to show them all in a row when we have more than 3) */
 
 #head1,
 #head2,
 #head3 {
-    width:100px;
+  width: 100px;
 }
 
 #body1,
 #body2,
-#body3 {
-    width:150px;
-}
-
+#body3,
 #feet1,
 #feet2,
 #feet3 {
-    height:150px;
-}
-
-#canvas {
-    border: 1px solid black;
-    position: fixed;
-    right: 0;
-    top: 0;
+  width: 150px;
 }
