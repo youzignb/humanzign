@@ -4,11 +4,6 @@ const canvas = document.getElementById("canvas");
 //create the 2d context for canvas
 const ctx = canvas.getContext("2d");
 
-// write hello world
-ctx.font = "30px Arial";
-ctx.textAlign = "center";
-ctx.fillText("Hello World", 250, 15);
-
 //draw head
 var head = document.getElementById("head1").src;
 

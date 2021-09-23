@@ -1,0 +1,53 @@
+{
+  "head": [
+    {
+      "name": "Head1",
+      "thumbnail": "images/head1.png",
+      "image": "images/head1.png"
+    },
+    {
+      "name": "Head2",
+      "thumbnail": "images/head2.png",
+      "image": "images/head2.png"
+    },
+    {
+      "name": "Head1",
+      "thumbnail": "images/head3.png",
+      "image": "images/head3.png"
+    }
+  ],
+  "body": [
+    {
+      "name": "Body1",
+      "thumbnail": "images/body1.png",
+      "image": "images/body1.png"
+    },
+    {
+      "name": "Body2",
+      "thumbnail": "images/body2.png",
+      "image": "images/body2.png"
+    },
+    {
+      "name": "Body3",
+      "thumbnail": "images/body3.png",
+      "image": "images/body3.png"
+    }
+  ],
+  "feet": [
+    {
+      "name": "Feet1",
+      "thumbnail": "images/feet1.png",
+      "image": "images/feet1.png"
+    },
+    {
+      "name": "Feet2",
+      "thumbnail": "images/feet2.png",
+      "image": "images/feet2.png"
+    },
+    {
+      "name": "Feet3",
+      "thumbnail": "images/feet3.png",
+      "image": "images/feet3.png"
+    }
+  ]
+}
