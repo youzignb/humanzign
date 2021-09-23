@@ -1,21 +1,23 @@
-//get element id for the frame and call it canvas so we can manipulate it in JS
+//constants to avoid typos when using strings
+const HEAD = "head";
+const FACE = "face";
+const BODY = "body";
+const FEET = "feet";
+
+//get canvas element
 const canvas = document.getElementById("canvas");
 
 //create the 2d context for canvas
 const ctx = canvas.getContext("2d");
 
-//draw head
-var head = document.getElementById("head1").src;
+//draw default human
+let humanzign = new Object();
+humanzign.head = "";
+humanzign.face = "";
+humanzign.body = "";
+humanzign.feet = "";
 
-//draw body
-var body = document.getElementById("body1").src;
-
-//draw feet
-var feet = document.getElementById("feet1").src;
-
-updateCanvas();
-
-//ADDHEAD define the function that adds an image at a particular position
+//add image with set parameters
 function addImage(src, x, y, w, h) {
   let image = new Image();
   image.src = src;
@@ -24,50 +26,75 @@ function addImage(src, x, y, w, h) {
   };
 }
 
+//clear the canvas then run add image with attributes
 function updateCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  addImage(head, 155, 30, 200, 200);
-  addImage(body, 50, 210, 400, 400);
-  addImage(feet, -50, 470, 600, 420);
+  addImage(humanzign.head, 155, 30, 200, 200);
+  //   addImage(humanzign.face, 155, 30, 200, 200); (will add it when faces are ready)
+  addImage(humanzign.body, 50, 210, 400, 400);
+  addImage(humanzign.feet, -50, 470, 600, 420);
 }
 
-// when clicking on head2, load head2 on canvas
-document.getElementById("head2").addEventListener("click", function () {
-  head = "/images/head/head2.png";
-  updateCanvas();
-});
+//load thumbnails to components divs
+fetch("database.json")
+  .then((response) => response.json())
+  .then((json) => {
+    //genetare thumbnails list
+    generateThumbnails(json.head, document.getElementById(HEAD), HEAD);
+    generateThumbnails(json.head, document.getElementById(FACE), FACE);
+    generateThumbnails(json.body, document.getElementById(BODY), BODY);
+    generateThumbnails(json.feet, document.getElementById(FEET), FEET);
 
-// when clicking on head1, load head1 on canvas
-//not pretty, image sizes need to be adjusted
-document.getElementById("head1").addEventListener("click", function () {
-  head = "/images/head/head1.png";
-  updateCanvas();
-});
+    //update canvas after everything is loaded and we have head, body, feet images
+    updateCanvas();
+  });
 
-// when clicking on head3, load head3 on canvas
-//not pretty, image sizes need to be adjusted
-document.getElementById("head3").addEventListener("click", function () {
-  head = "/images/head/head3.png";
-  updateCanvas();
-});
+//assign default images for head, body, feet
+function generateThumbnails(array, container, type) {
+  switch (type) {
+    case HEAD:
+      humanzign.head = array[0].image;
+      break;
 
-///BODY
+    // case FACE:
+    // humanzign.face = array[0].image;
+    // break;
 
-// when clicking on body1, load body1 on canvas
-document.getElementById("body1").addEventListener("click", function () {
-  body = "/images/body/body1.png";
-  updateCanvas();
-});
+    case BODY:
+      humanzign.body = array[0].image;
+      break;
 
-// when clicking on body2, load body2 on canvas
-document.getElementById("body2").addEventListener("click", function () {
-  body = "/images/body/body2.png";
-  updateCanvas();
-});
+    case FEET:
+      humanzign.feet = array[0].image;
+      break;
+  }
 
-// when clicking on body3, load body3 on canvas
-document.getElementById("body3").addEventListener("click", function () {
-  body = "/images/body/body3.png";
-  updateCanvas();
-});
+  //loop through the array
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+
+    //create new image element
+    let image = new Image();
+    image.alt = element.name;
+    image.src = element.thumbnail;
+    image.addEventListener("click", () => {
+      switch (type) {
+        case HEAD:
+          humanzign.head = element.image;
+          break;
+
+        case BODY:
+          humanzign.body = element.image;
+          break;
+
+        case FEET:
+          humanzign.feet = element.image;
+          break;
+      }
+
+      updateCanvas();
+    });
+    container.append(image);
+  }
+}
