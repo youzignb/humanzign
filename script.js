@@ -30,10 +30,10 @@ function addImage(src, x, y, w, h) {
 function updateCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  addImage(humanzign.head, 155, 30, 200, 200);
+  addImage(humanzign.head, 0, 0, 583, 706);
   //   addImage(humanzign.face, 155, 30, 200, 200); (will add it when faces are ready)
-  addImage(humanzign.body, 50, 210, 400, 400);
-  addImage(humanzign.feet, -50, 470, 600, 420);
+  addImage(humanzign.body, 0, 0, 583, 706);
+  addImage(humanzign.feet, 0, 0, 583, 706);
 }
 
 //load thumbnails to components divs
@@ -42,7 +42,7 @@ fetch("database.json")
   .then((json) => {
     //genetare thumbnails list
     generateThumbnails(json.head, document.getElementById(HEAD), HEAD);
-    generateThumbnails(json.head, document.getElementById(FACE), FACE);
+    //generateThumbnails(json.head, document.getElementById(FACE), FACE);
     generateThumbnails(json.body, document.getElementById(BODY), BODY);
     generateThumbnails(json.feet, document.getElementById(FEET), FEET);
 
