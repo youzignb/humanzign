@@ -2,45 +2,61 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Google Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script defer src="script.js"></script>
-
-    <title>Humanzign</title>
+    <!-- missing favicons, meta, utf spec og data and other boilerplate html5 elements -->
+    <title>Humanzign - Create</title>
   </head>
 
   <body>
-    <div class="header">
-      <div class="collection">
-        <h1>Humanzign</h1>
-      </div>
-      <div class="actions">
-        <button name="button" id="btn-download" href="">Download</button>
-      </div>
-    </div>
-    <div class="main">
-      <div class="sidebar">
-        <div class="head">
-          <h2>Head</h2>
-          <img src="/images/head/head1.png" id="head1" />
-          <img src="/images/head/head2.png" id="head2" />
-          <img src="/images/head/head3.png" id="head3" />
+    <div class="container">
+      <header>
+        <div class="logo">
+          <h1>humanzign</h1>
         </div>
-        <div class="body">
-          <h2>Body</h2>
-          <img src="/images/body/body1.png" id="body1" />
-          <img src="/images/body/body2.png" id="body2" />
-          <img src="/images/body/body3.png" id="body3" />
-        </div>
-        <div class="feet">
-          <h2>Feet</h2>
-          <img src="/images/feet/feet1.png" id="feet1" />
-          <img src="/images/feet/feet2.png" id="feet2" />
-          <img src="/images/feet/feet3.png" id="feet3" />
-        </div>
-      </div>
+        <section class="actions">
+          <button name="download" class="button btn-download" href="#">
+            Download
+          </button>
+        </section>
+      </header>
 
-      <div class="drawarea">
-        <canvas id="canvas" width="600" height="900"></canvas>
-      </div>
+      <main>
+        <aside>
+          <nav>
+            <div><a href="#" title="Dashboard">Dashboard</a> → Julie</div>
+            </ul>
+          </nav>
+          <div class="components">
+            
+            <div id="head">
+              <h2>Head</h2>
+            </div>
+
+            <div id="face">
+              <h2>Face</h2>
+            </div>
+
+            <div id="body">
+              <h2>Body</h2>
+            </div>
+
+            <div id="feet">
+              <h2>Feet</h2>
+              
+            </div>
+          </div>
+        </aside>
+
+        <div class="canvas">
+          <canvas id="canvas" width="500" height="620"> </canvas>
+        </div>
+      </main>
+      <footer>Made with ❤️ in Brussels by &copy;Youzign</footer>
     </div>
   </body>
 </html>

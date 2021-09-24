@@ -1,122 +1,100 @@
-console.log("hello world");
+//constants to avoid typos when using strings
+const HEAD = "head";
+const FACE = "face";
+const BODY = "body";
+const FEET = "feet";
 
-//DECLARE CANVAS get element id for the frame and call it canvas so we can manipulate it in JS
+//get canvas element
 const canvas = document.getElementById("canvas");
 
-//2D CONTEXT the 2d context for canvas
+//create the 2d context for canvas
 const ctx = canvas.getContext("2d");
 
-// write hello world
-ctx.font = "30px Arial";
-ctx.textAlign = "center";
-ctx.fillText("Hello World", 250, 30);
+//draw default human
+let humanzign = new Object();
+humanzign.head = "";
+humanzign.face = "";
+humanzign.body = "";
+humanzign.feet = "";
 
-//wait for page to load then add the default image to the canvas
-window.onload = function() {
-    const canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
+//add image with set parameters
+function addImage(src, x, y, w, h) {
+  let image = new Image();
+  image.src = src;
+  image.onload = function () {
+    ctx.drawImage(image, x, y, w, h); //draw image
+  };
+}
 
-    //draw head
-    var head = document.getElementById("head1");
-    ctx.drawImage(head, 155, 30, 200, 200);
+//clear the canvas then run add image with attributes
+function updateCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    //draw body
-    var body = document.getElementById("body1");
-    ctx.drawImage(body, 50, 210, 400, 400);
+  addImage(humanzign.head, 155, 30, 200, 200);
+  //   addImage(humanzign.face, 155, 30, 200, 200); (will add it when faces are ready)
+  addImage(humanzign.body, 50, 210, 400, 400);
+  addImage(humanzign.feet, -50, 470, 600, 420);
+}
 
-    //draw feet
-    var feet = document.getElementById("feet1");
-    ctx.drawImage(feet, -50, 470, 600, 420);
-};
+//load thumbnails to components divs
+fetch("database.json")
+  .then((response) => response.json())
+  .then((json) => {
+    //genetare thumbnails list
+    generateThumbnails(json.head, document.getElementById(HEAD), HEAD);
+    generateThumbnails(json.head, document.getElementById(FACE), FACE);
+    generateThumbnails(json.body, document.getElementById(BODY), BODY);
+    generateThumbnails(json.feet, document.getElementById(FEET), FEET);
 
-//ADDHEAD define the function that adds an image at a particular position
-function addHead(src, x, y,w,h) {
+    //update canvas after everything is loaded and we have head, body, feet images
+    updateCanvas();
+  });
+
+//assign default images for head, body, feet
+function generateThumbnails(array, container, type) {
+  switch (type) {
+    case HEAD:
+      humanzign.head = array[0].image;
+      break;
+
+    // case FACE:
+    // humanzign.face = array[0].image;
+    // break;
+
+    case BODY:
+      humanzign.body = array[0].image;
+      break;
+
+    case FEET:
+      humanzign.feet = array[0].image;
+      break;
+  }
+
+  //loop through the array
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+
+    //create new image element
     let image = new Image();
-    image.src = src;
-    image.onload = function() {
-        
-        // ctx.clearRect(150,40,210,188);
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-        ctx.drawImage(image, x, y,w,h); //draw image
-    }
+    image.alt = element.name;
+    image.src = element.thumbnail;
+    image.addEventListener("click", () => {
+      switch (type) {
+        case HEAD:
+          humanzign.head = element.image;
+          break;
+
+        case BODY:
+          humanzign.body = element.image;
+          break;
+
+        case FEET:
+          humanzign.feet = element.image;
+          break;
+      }
+
+      updateCanvas();
+    });
+    container.append(image);
+  }
 }
-
-//ADDBODY define the function that adds an image at a particular position
-function addBody(src, x, y,w,h) {
-    let image = new Image();
-    image.src = src;
-    image.onload = function() {
-        ctx.clearRect(50,218,400,392);
-
-        ctx.drawImage(image, x, y,w,h); //draw image
-    }
-}
-
-
-//createHead: pass the attributes for addHead to the createHead function
-function createHead() {
-    addHead(head, 155, 30,200,200);
-   
-}
-
-//createBody: pass the attributes for addBody to the createBody function
-function createBody() {
-    addBody(body, 50, 210,400,400);
-}
-
-
-///HEAD
-
-// when clicking on head2, load head2 on canvas
-document.getElementById("head2").addEventListener("click", function () {
-    head = "/images/head/head2.png";
-    createHead();
-
-});
-
-// when clicking on head1, load head1 on canvas
-document.getElementById("head1").addEventListener("click", function () {
-    head = "/images/head/head1.png";
-    createHead();
-
-});
-
-// when clicking on head3, load head3 on canvas
-document.getElementById("head3").addEventListener("click", function () {
-    head = "/images/head/head3.png";
-    createHead();
-
-});
-
-///BODY
-
-// when clicking on body1, load body1 on canvas
-document.getElementById("body1").addEventListener("click", function () {
-    body = "/images/body/body1.png";
-    createBody();
-
-});
-
-// when clicking on body2, load body2 on canvas
-document.getElementById("body2").addEventListener("click", function () {
-    body = "/images/body/body2.png";
-    createBody();
-
-});
-
-// when clicking on body3, load body3 on canvas
-document.getElementById("body3").addEventListener("click", function () {
-    body = "/images/body/body3.png";
-    createBody();
-
-});
-
-
-
-
-//DOWNLOAD
-// var button = document.getElementById('btn-download');
-// button.addEventListener('click', function (e) {
-//     var dataURL = canvas.toDataURL('image/png');
-//     button.href = dataURL;
-// });
