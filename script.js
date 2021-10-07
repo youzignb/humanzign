@@ -31,7 +31,7 @@ function updateCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   addImage(humanzign.head, 0, 0, 583, 706);
-  //   addImage(humanzign.face, 155, 30, 200, 200); (will add it when faces are ready)
+  addImage(humanzign.face, 0, 0, 583, 706);
   addImage(humanzign.body, 0, 0, 583, 706);
   addImage(humanzign.feet, 0, 0, 583, 706);
 }
@@ -42,7 +42,7 @@ fetch("database.json")
   .then((json) => {
     //genetare thumbnails list
     generateThumbnails(json.head, document.getElementById(HEAD), HEAD);
-    //generateThumbnails(json.head, document.getElementById(FACE), FACE);
+    generateThumbnails(json.face, document.getElementById(FACE), FACE);
     generateThumbnails(json.body, document.getElementById(BODY), BODY);
     generateThumbnails(json.feet, document.getElementById(FEET), FEET);
 
@@ -57,9 +57,9 @@ function generateThumbnails(array, container, type) {
       humanzign.head = array[0].image;
       break;
 
-    // case FACE:
-    // humanzign.face = array[0].image;
-    // break;
+    case FACE:
+      humanzign.face = array[0].image;
+      break;
 
     case BODY:
       humanzign.body = array[0].image;
@@ -84,9 +84,13 @@ function generateThumbnails(array, container, type) {
           humanzign.head = element.image;
           break;
 
-        case BODY:
-          humanzign.body = element.image;
+        case FACE:
+          humanzign.face = element.image;
           break;
+
+        case BODY:
+            humanzign.body = element.image;
+            break;
 
         case FEET:
           humanzign.feet = element.image;
