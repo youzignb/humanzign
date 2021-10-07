@@ -17,12 +17,22 @@ humanzign.face = "";
 humanzign.body = "";
 humanzign.feet = "";
 
+//array that holds the body parts strings
+let bodyParts = new Array();
+
+//body part load index
+let bodyPartIndex = 0;
+
 //add image with set parameters
 function addImage(src, x, y, w, h) {
   let image = new Image();
   image.src = src;
   image.onload = function () {
     ctx.drawImage(image, x, y, w, h); //draw image
+
+    //if it's not at the end of the array, continue calling the addNextImage function
+    if(bodyPartIndex < bodyParts.length)
+      addNextImage();
   };
 }
 
@@ -30,10 +40,28 @@ function addImage(src, x, y, w, h) {
 function updateCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  addImage(humanzign.head, 0, 0, 583, 706);
-  addImage(humanzign.face, 0, 0, 583, 706);
-  addImage(humanzign.body, 0, 0, 583, 706);
-  addImage(humanzign.feet, 0, 0, 583, 706);
+  //reset the index position
+  bodyPartIndex = 0;
+
+  //empty the body parts array to not have any more url strings in there
+  bodyParts = [];
+  
+  //populate the body parts array with the new image strings
+  bodyParts.push(humanzign.feet);
+  bodyParts.push(humanzign.body);
+  bodyParts.push(humanzign.head);
+  bodyParts.push(humanzign.face);
+
+  //start loading and drawing images
+  addNextImage();
+}
+
+function addNextImage()
+{
+  addImage(bodyParts[bodyPartIndex], 0, 0, 583, 706);
+
+  //increase the index to change the position of the loaded item into the array next time addNextImage is called
+  bodyPartIndex++;
 }
 
 //load thumbnails to components divs
