@@ -2,189 +2,160 @@
   "head": [
     {
       "name": "Head1",
-      "thumbnail": "images/head/thumbnailhead1.png",
-      "image": "images/head/head1.png"
+      "thumbnail": "images/head/thumbnail_head1.svg",
+      "image": "images/head/a_head1.svg"
     },
     {
       "name": "Head2",
-      "thumbnail": "images/head/thumbnailhead2.png",
-      "image": "images/head/head2.png"
+      "thumbnail": "images/head/thumbnail_head2.svg",
+      "image": "images/head/a_head2.svg"
     },
     {
       "name": "Head3",
-      "thumbnail": "images/head/thumbnailhead3.png",
-      "image": "images/head/head3.png"
+      "thumbnail": "images/head/thumbnail_head3.svg",
+      "image": "images/head/a_head3.svg"
     },
     {
-      "name": "Head1",
-      "thumbnail": "images/head/thumbnailhead1.png",
-      "image": "images/head/head1.png"
+      "name": "Head4",
+      "thumbnail": "images/head/thumbnail_head4.svg",
+      "image": "images/head/a_head4.svg"
     },
     {
-      "name": "Head2",
-      "thumbnail": "images/head/thumbnailhead2.png",
-      "image": "images/head/head2.png"
+      "name": "Head5",
+      "thumbnail": "images/head/thumbnail_head5.svg",
+      "image": "images/head/a_head5.svg"
     },
     {
-      "name": "Head3",
-      "thumbnail": "images/head/thumbnailhead3.png",
-      "image": "images/head/head3.png"
+      "name": "Head6",
+      "thumbnail": "images/head/thumbnail_head6.svg",
+      "image": "images/head/a_head6.svg"
     },
     {
-      "name": "Head1",
-      "thumbnail": "images/head/thumbnailhead1.png",
-      "image": "images/head/head1.png"
+      "name": "Head7",
+      "thumbnail": "images/head/thumbnail_head7.svg",
+      "image": "images/head/a_head7.svg"
     },
     {
-      "name": "Head2",
-      "thumbnail": "images/head/thumbnailhead2.png",
-      "image": "images/head/head2.png"
+      "name": "Head8",
+      "thumbnail": "images/head/thumbnail_head8.svg",
+      "image": "images/head/a_head8.svg"
     },
     {
-      "name": "Head3",
-      "thumbnail": "images/head/thumbnailhead3.png",
-      "image": "images/head/head3.png"
+      "name": "Head9",
+      "thumbnail": "images/head/thumbnail_head9.svg",
+      "image": "images/head/a_head9.svg"
+    },
+    {
+      "name": "Head10",
+      "thumbnail": "images/head/thumbnail_head10.svg",
+      "image": "images/head/a_head10.svg"
+    },
+    {
+      "name": "Head11",
+      "thumbnail": "images/head/thumbnail_head11.svg",
+      "image": "images/head/a_head11.svg"
+    } ,
+    {
+      "name": "Head12",
+      "thumbnail": "images/head/thumbnail_head12.svg",
+      "image": "images/head/a_head12.svg"
     }
   ],
   "face": [
     {
-      "name": "Head1",
-      "thumbnail": "images/head/thumbnailhead1.png",
-      "image": "images/head/head1.png"
+      "name": "Face1",
+      "thumbnail": "images/face/thumbnail_face1.svg",
+      "image": "images/face/a_face1.svg"
     },
     {
-      "name": "Head2",
-      "thumbnail": "images/head/thumbnailhead2.png",
-      "image": "images/head/head2.png"
+      "name": "Face2",
+      "thumbnail": "images/face/thumbnail_face2.svg",
+      "image": "images/face/a_face2.svg"
     },
     {
-      "name": "Head3",
-      "thumbnail": "images/head/thumbnailhead3.png",
-      "image": "images/head/head3.png"
+      "name": "face",
+      "thumbnail": "images/face/thumbnail_face3.svg",
+      "image": "images/face/a_face3.svg"
     },
     {
-      "name": "Head1",
-      "thumbnail": "images/head/thumbnailhead1.png",
-      "image": "images/head/head1.png"
+      "name": "face",
+      "thumbnail": "images/face/thumbnail_face4.svg",
+      "image": "images/face/a_face4.svg"
     },
     {
-      "name": "Head2",
-      "thumbnail": "images/head/thumbnailhead2.png",
-      "image": "images/head/head2.png"
+      "name": "face",
+      "thumbnail": "images/face/thumbnail_face5.svg",
+      "image": "images/face/a_face5.svg"
     },
     {
-      "name": "Head3",
-      "thumbnail": "images/head/thumbnailhead3.png",
-      "image": "images/head/head3.png"
-    },
-    {
-      "name": "Head1",
-      "thumbnail": "images/head/thumbnailhead1.png",
-      "image": "images/head/head1.png"
-    },
-    {
-      "name": "Head2",
-      "thumbnail": "images/head/thumbnailhead2.png",
-      "image": "images/head/head2.png"
-    },
-    {
-      "name": "Head3",
-      "thumbnail": "images/head/thumbnailhead3.png",
-      "image": "images/head/head3.png"
+      "name": "face",
+      "thumbnail": "images/thumbnail_face6.svg",
+      "image": "images/face/a_face6.svg"
     }
   ],
   "body": [
     {
       "name": "Body1",
-      "thumbnail": "images/body/thumbnailbody1.png",
-      "image": "images/body/body1.png"
+      "thumbnail": "images/body/thumbnail_body1.svg",
+      "image": "images/body/a_body1.svg"
     },
     {
       "name": "Body2",
-      "thumbnail": "images/body/thumbnailbody2.png",
-      "image": "images/body/body2.png"
+      "thumbnail": "images/body/thumbnail_body2.svg",
+      "image": "images/body/a_body2.svg"
     },
     {
       "name": "Body3",
-      "thumbnail": "images/body/thumbnailbody3.png",
-      "image": "images/body/body3.png"
+      "thumbnail": "images/body/thumbnail_body3.svg",
+      "image": "images/body/a_body3.svg"
     },
     {
-      "name": "Body1",
-      "thumbnail": "images/body/thumbnailbody1.png",
-      "image": "images/body/body1.png"
+      "name": "Body4",
+      "thumbnail": "images/body/thumbnail_body4.svg",
+      "image": "images/body/a_body4.svg"
     },
     {
-      "name": "Body2",
-      "thumbnail": "images/body/thumbnailbody2.png",
-      "image": "images/body/body2.png"
+      "name": "Body5",
+      "thumbnail": "images/body/thumbnail_body5.svg",
+      "image": "images/body/a_body5.svg"
     },
     {
-      "name": "Body3",
-      "thumbnail": "images/body/thumbnailbody3.png",
-      "image": "images/body/body3.png"
-    },
-    {
-      "name": "Body1",
-      "thumbnail": "images/body/thumbnailbody1.png",
-      "image": "images/body/body1.png"
-    },
-    {
-      "name": "Body2",
-      "thumbnail": "images/body/thumbnailbody2.png",
-      "image": "images/body/body2.png"
-    },
-    {
-      "name": "Body3",
-      "thumbnail": "images/body/thumbnailbody3.png",
-      "image": "images/body/body3.png"
+      "name": "Body6",
+      "thumbnail": "images/body/thumbnail_body6.svg",
+      "image": "images/body/a_body6.svg"
     }
   ],
   "feet": [
     {
       "name": "Feet1",
-      "thumbnail": "images/feet/thumbnailfeet1.png",
-      "image": "images/feet/feet1.png"
+      "thumbnail": "images/feet/thumbnail_feet1.svg",
+      "image": "images/feet/a_feet1.svg"
     },
     {
       "name": "Feet2",
-      "thumbnail": "images/feet/thumbnailfeet2.png",
-      "image": "images/feet/feet2.png"
+      "thumbnail": "images/feet/thumbnail_feet2.svg",
+      "image": "images/feet/a_feet2.svg"
     },
     {
       "name": "Feet3",
-      "thumbnail": "images/feet/thumbnailfeet3.png",
-      "image": "images/feet/feet3.png"
+      "thumbnail": "images/feet/thumbnail_feet3.svg",
+      "image": "images/feet/a_feet3.svg"
     },
     {
-      "name": "Feet1",
-      "thumbnail": "images/feet/thumbnailfeet1.png",
-      "image": "images/feet/feet1.png"
+      "name": "Feet4",
+      "thumbnail": "images/feet/thumbnail_feet4.svg",
+      "image": "images/feet/a_feet4.svg"
     },
     {
-      "name": "Feet2",
-      "thumbnail": "images/feet/thumbnailfeet2.png",
-      "image": "images/feet/feet2.png"
+      "name": "Feet5",
+      "thumbnail": "images/feet/thumbnail_feet5.svg",
+      "image": "images/feet/a_feet5.svg"
     },
     {
-      "name": "Feet3",
-      "thumbnail": "images/feet/thumbnailfeet3.png",
-      "image": "images/feet/feet3.png"
-    },
-    {
-      "name": "Feet1",
-      "thumbnail": "images/feet/thumbnailfeet1.png",
-      "image": "images/feet/feet1.png"
-    },
-    {
-      "name": "Feet2",
-      "thumbnail": "images/feet/thumbnailfeet2.png",
-      "image": "images/feet/feet2.png"
-    },
-    {
-      "name": "Feet3",
-      "thumbnail": "images/feet/thumbnailfeet3.png",
-      "image": "images/feet/feet3.png"
+      "name": "Feet6",
+      "thumbnail": "images/feet/thumbnail_feet6.svg",
+      "image": "images/feet/a_feet6.svg"
+    
     }
   ]
 }
