@@ -1,0 +1,93 @@
+/* MAIN LAYOUT  */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* reset styles */
+}
+
+h1 {
+  font-size: x-large;
+}
+
+h2 {
+  font-size: large;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  margin-left: auto;
+  margin-right: auto;
+  row-gap: 10px;
+  width: 1140px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.button {
+  cursor: pointer;
+  padding: 13px 25px;
+  background-color: #fff;
+  color: #111111;
+  font-size: 1em;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background-color: rgb(39, 39, 39);
+}
+button:focus {
+}
+button:active {
+}
+button:visited {
+}
+
+/* //Drawing area (aside + canvas) */
+main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 0px;
+  row-gap: 50px;
+  padding: 20px 100px;
+}
+
+.title {
+  display: flex;
+  justify-self: center;
+  padding-bottom: 20px;
+}
+
+.character {
+}
+
+/* Footer */
+
+footer {
+  font-size: smaller;
+  color: #cccccc;
+  justify-self: center;
+}
+
+@media (max-width: 600px) {
+  footer {
+    justify-self: start;
+    padding-left: 20px;
+  }
+}
+
+/* Components (need to find a better way to show them all in a row when we have more than 3) */
