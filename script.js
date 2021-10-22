@@ -105,14 +105,17 @@ function updateCanvas() {
 
 //load thumbnails to components divs
 fetch("assets/" + humanName + "/database.json")
-  .then((response) => response.json())
-  .then((json) => {
-    //genetare thumbnails list
-    generateThumbnails(json.head, document.getElementById(HEAD), HEAD);
-    generateThumbnails(json.face, document.getElementById(FACE), FACE);
-    generateThumbnails(json.body, document.getElementById(BODY), BODY);
-    generateThumbnails(json.feet, document.getElementById(FEET), FEET);
-  });
+.then((response) => response.json())
+.then((json) => {
+  //genetare thumbnails list
+  generateThumbnails(json.head, document.getElementById(HEAD), HEAD);
+  generateThumbnails(json.face, document.getElementById(FACE), FACE);
+  generateThumbnails(json.body, document.getElementById(BODY), BODY);
+  generateThumbnails(json.feet, document.getElementById(FEET), FEET);
+})
+.catch((error) => {
+  alert("This humanzign does not exist!");
+});
 
 //assign default images for head, body, feet
 function generateThumbnails(array, container, type) {
