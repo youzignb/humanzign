@@ -1,3 +1,14 @@
+
+
+//default name is Bryan
+let humanName = "Bryan";
+
+let url = new URL(window.location.href);
+
+//if there is a URL parameter with the name value, populate that to the humanName variable 
+if(url.searchParams.get("name"))
+  humanName = url.searchParams.get("name");
+
 //constants to avoid typos when using strings
 const HEAD = "head";
 const FACE = "face";
@@ -93,7 +104,7 @@ function updateCanvas() {
 }
 
 //load thumbnails to components divs
-fetch("database.json")
+fetch("assets/" + humanName + "/database.json")
   .then((response) => response.json())
   .then((json) => {
     //genetare thumbnails list
@@ -123,16 +134,15 @@ function generateThumbnails(array, container, type) {
   }
 }
 
-let humanName = document.getElementById("humanName");
+let humanNameContainer = document.getElementById("humanNameContainer");
+humanNameContainer.innerText = humanName;
 
 let buttonDownload = document.getElementById("buttonDownload")
 buttonDownload.addEventListener("click", download);
 
-function download()
-{
-  console.log("download")
+function download() {
   var link = document.createElement('a');
-  link.download = `${humanName.innerText}.png`;
+  link.download = `${humanNameContainer.innerText}.png`;
   link.href = canvas.toDataURL();
   link.click();
 }
