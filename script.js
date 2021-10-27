@@ -1,5 +1,3 @@
-
-
 //default name is Bryan
 let humanName = "Bryan";
 
@@ -119,7 +117,7 @@ fetch("assets/" + humanName + "/database.json")
 
 //assign default images for head, body, feet
 function generateThumbnails(array, container, type) {
-  loadImage(array[0].image, type, 0, 0, 583, 706);
+  loadImage("assets/" + humanName + "/" + array[0].image, type, 0, 0, 583, 706);
 
   //loop through the array
   for (let index = 0; index < array.length; index++) {
@@ -128,10 +126,10 @@ function generateThumbnails(array, container, type) {
     //create new image element
     let image = new Image();
     image.alt = element.name;
-    image.src = element.thumbnail;
+    image.src = "assets/" + humanName + "/" + element.thumbnail;
     image.addEventListener("click", () =>
     {
-      loadImage(element.image, type, 0, 0, 583, 706);
+      loadImage("assets/" + humanName + "/" + element.image, type, 0, 0, 583, 706);
     });
     container.append(image);
   }
