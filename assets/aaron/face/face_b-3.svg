@@ -1,1 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200"><defs><style>.cls-1,.cls-4{fill:none;}.cls-2{fill:#fff;}.cls-3{clip-path:url(#clip-path);}.cls-4{stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}.cls-5{clip-path:url(#clip-path-2);}.cls-6{fill:#844f3d;}.cls-7{fill:#66183f;}.cls-8{fill:#bfbfbf;}</style><clipPath id="clip-path"><rect class="cls-1" x="68.41" y="93.46" width="23.15" height="6.96"/></clipPath><clipPath id="clip-path-2"><rect class="cls-1" x="108.44" y="93.46" width="23.15" height="6.96"/></clipPath></defs><g id="Calque_10" data-name="Calque 10"><circle class="cls-2" cx="81.46" cy="113.04" r="6.75"/><circle class="cls-2" cx="117.69" cy="113.04" r="6.75"/><circle cx="79.25" cy="111.32" r="3.29"/><circle cx="115.59" cy="111.32" r="3.29"/><g class="cls-3"><path class="cls-4" d="M90.56,99.41c-2.88-2.32-8.24-5.85-14.35-4.74-5.33,1-6.8,4.64-6.8,4.64"/></g><g class="cls-5"><path class="cls-4" d="M109.44,99.41c2.88-2.32,8.24-5.85,14.35-4.74,5.33,1,6.8,4.64,6.8,4.64"/></g><path class="cls-6" d="M106.81,133.5s-4.7,3.69-7.43,3.69c-2.58,0-7-3.59-7-3.59s5.4.73,7.21.72S106.81,133.5,106.81,133.5Z"/><path class="cls-7" d="M83.81,147.93c.29-.63,1.42-1.63,3.5-2.54a29.27,29.27,0,0,1,10.56-2.1,22.73,22.73,0,0,1,15.86,6.06s-4.59,11.74-15.81,10.88C89.78,159.6,83.81,147.93,83.81,147.93Z"/><path class="cls-8" d="M98.27,148.31,90,147.94l-2.2-.92a28.22,28.22,0,0,1,11.43-2c6.7.35,10.32,2.92,10.32,2.92l-1.71.8Z"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{clip-path:url(#SVGID_00000086693639098419007950000017992342753516012677_);}
+	.st2{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{clip-path:url(#SVGID_00000147922945892720756980000013911103016919785384_);}
+	.st4{fill:#844F3D;}
+	.st5{fill:#66494D;}
+	.st6{fill:#BFBFBF;}
+</style>
+<g id="Calque_10">
+	<circle class="st0" cx="81.5" cy="113" r="6.8"/>
+	<circle class="st0" cx="117.7" cy="113" r="6.8"/>
+	<circle cx="79.2" cy="111.3" r="3.3"/>
+	<circle cx="115.6" cy="111.3" r="3.3"/>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="68.4" y="93.5" width="23.2" height="7"/>
+		</defs>
+		<clipPath id="SVGID_00000077287964215380649070000007115859371076767932_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_00000077287964215380649070000007115859371076767932_);">
+			<path class="st2" d="M90.6,99.4c-2.9-2.3-8.2-5.8-14.3-4.7c-5.3,1-6.8,4.6-6.8,4.6"/>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_00000146493276661748620260000005014891285014824590_" x="108.4" y="93.5" width="23.1" height="7"/>
+		</defs>
+		<clipPath id="SVGID_00000128465010042705701110000015468163895148557726_">
+			<use xlink:href="#SVGID_00000146493276661748620260000005014891285014824590_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_00000128465010042705701110000015468163895148557726_);">
+			<path class="st2" d="M109.4,99.4c2.9-2.3,8.2-5.8,14.3-4.7c5.3,1,6.8,4.6,6.8,4.6"/>
+		</g>
+	</g>
+	<path class="st4" d="M106.8,133.5c0,0-4.7,3.7-7.4,3.7c-2.6,0-7-3.6-7-3.6s5.4,0.7,7.2,0.7S106.8,133.5,106.8,133.5z"/>
+	<path class="st5" d="M83.8,147.9c0.3-0.6,1.4-1.6,3.5-2.5c3.4-1.3,6.9-2.1,10.6-2.1c5.9-0.1,11.6,2.1,15.9,6.1
+		c0,0-4.6,11.7-15.8,10.9C89.8,159.6,83.8,147.9,83.8,147.9z"/>
+	<path class="st6" d="M98.3,148.3l-8.3-0.4l-2.2-0.9c3.6-1.5,7.5-2.1,11.4-2c6.7,0.4,10.3,2.9,10.3,2.9l-1.7,0.8L98.3,148.3z"/>
+</g>
+</svg>
