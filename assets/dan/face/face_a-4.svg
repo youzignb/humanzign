@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 788 1005" style="enable-background:new 0 0 788 1005;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#080808;stroke:#000000;stroke-miterlimit:10;}
+	.st2{clip-path:url(#SVGID_00000131333474428138347490000000448966519978328232_);}
+	.st3{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st4{clip-path:url(#SVGID_00000041269478545502848590000014258496460146611594_);}
+	.st5{fill:#844F3D;}
+	.st6{fill:#66183F;}
+</style>
+<g id="Calque_10">
+	<circle class="st0" cx="413.6" cy="244" r="6.8"/>
+	<circle class="st0" cx="378.8" cy="244" r="6.8"/>
+	<circle class="st1" cx="380.9" cy="244.1" r="4"/>
+	<circle class="st1" cx="415.8" cy="244.1" r="4"/>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="405.4" y="227.1" width="22.1" height="6.7"/>
+		</defs>
+		<clipPath id="SVGID_00000083055449912719913840000005290921464405850025_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_00000083055449912719913840000005290921464405850025_);">
+			<path class="st3" d="M406.4,231.4c6.1-4.9,14.8-4.3,20.2,1.4"/>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_00000116212550600864238650000015439725592820876729_" x="366.1" y="227.1" width="22.1" height="6.7"/>
+		</defs>
+		<clipPath id="SVGID_00000096758326132764058340000003824237431162358698_">
+			<use xlink:href="#SVGID_00000116212550600864238650000015439725592820876729_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_00000096758326132764058340000003824237431162358698_);">
+			<path class="st3" d="M387.3,231.4c-6.1-4.9-14.8-4.3-20.2,1.4"/>
+		</g>
+	</g>
+	<path class="st5" d="M404.8,266.2c0,0-4.7,3.7-7.4,3.7s-7-3.6-7-3.6s5.4,0.7,7.2,0.7S404.8,266.2,404.8,266.2z"/>
+	<ellipse class="st6" cx="397.2" cy="285.7" rx="2.9" ry="4.5"/>
+</g>
+</svg>
