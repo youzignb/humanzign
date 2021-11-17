@@ -29,35 +29,34 @@ let bodyParts = new Array();
 let bodyPartIndex = 0;
 
 //add image with set parameters
-function loadImage(src, type, x, y, w, h) 
+function loadImage(src, type, w, h) 
 {
-  var img = new Image();
-  var src = src;
+  let img = new Image();
+  img.crossOrigin = "anonymous";
 
   // request the XML of your svg file
-  var request = new XMLHttpRequest();
+  let request = new XMLHttpRequest();
   request.open('GET', src, true);
 
   request.onload = function() {
     // once the request returns, parse the response and get the SVG
-    var parser = new DOMParser();
-    var result = parser.parseFromString(request.responseText, 'text/xml');
-    var inlineSVG = result.getElementsByTagName("svg")[0];
+    let parser = new DOMParser();
+    let result = parser.parseFromString(request.responseText, 'text/xml');
+    let inlineSVG = result.getElementsByTagName("svg")[0];
     
     // add the attributes Firefox needs. These should be absolute values, not relative
     inlineSVG.setAttribute('width', w +'px');
     inlineSVG.setAttribute('height', h + 'px');
     
     // convert the SVG to a data uri
-    var svg64 = btoa(new XMLSerializer().serializeToString(inlineSVG));
-    var img64 = 'data:image/svg+xml;base64,' + svg64;
+    let svg64 = btoa(new XMLSerializer().serializeToString(inlineSVG));
+    let img64 = 'data:image/svg+xml;base64,' + svg64;
     
     // set that as your image source
     img.src = img64;
 
     // do your canvas work
-    img.onload = function() 
-    {
+    img.onload = function() {
         switch (type) {
           case HEAD:
             humanzign.head = this;
@@ -78,6 +77,13 @@ function loadImage(src, type, x, y, w, h)
 
         bodyPartIndexCounter();
     };
+
+    img.onerror = function() {
+        //display error
+        document.body.appendChild(
+            document.createTextNode('\nError loading image: ' + type + " | " + this.src)
+        );
+    };
   }
   // send the request
   request.send();
@@ -88,7 +94,7 @@ function bodyPartIndexCounter()
   bodyPartIndex++;
 
   if(bodyPartIndex >= 4)
-    updateCanvas()
+    updateCanvas();
 }
 
 //clear the canvas then run add image with attributes
@@ -117,7 +123,7 @@ fetch("assets/" + humanName + "/database.json")
 
 //assign default images for head, body, feet
 function generateThumbnails(array, container, type) {
-  loadImage("assets/" + humanName + "/" + array[0].image, type, 0, 0, 583, 706);
+  loadImage("assets/" + humanName + "/" + array[0].image, type, 583, 706);
 
   //loop through the array
   for (let index = 0; index < array.length; index++) {
@@ -129,7 +135,7 @@ function generateThumbnails(array, container, type) {
     image.src = "assets/" + humanName + "/" + element.thumbnail;
     image.addEventListener("click", () =>
     {
-      loadImage("assets/" + humanName + "/" + element.image, type, 0, 0, 583, 706);
+      loadImage("assets/" + humanName + "/" + element.image, type, 583, 706);
     });
     container.append(image);
   }
