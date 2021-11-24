@@ -24,6 +24,10 @@ h2 {
   width: 1140px;
 }
 
+.thumbnail.selected {
+  opacity: .2;
+}
+
 @media (max-width: 600px) {
   .container {
     width: 100%;

@@ -29,8 +29,7 @@ let bodyParts = new Array();
 let bodyPartIndex = 0;
 
 //add image with set parameters
-function loadImage(src, type, w, h) 
-{
+function loadImage(src, type, w, h) {
   let img = new Image();
   img.crossOrigin = "anonymous";
 
@@ -89,8 +88,7 @@ function loadImage(src, type, w, h)
   request.send();
 }
 
-function bodyPartIndexCounter()
-{
+function bodyPartIndexCounter() {
   bodyPartIndex++;
 
   if(bodyPartIndex >= 4)
@@ -123,7 +121,8 @@ fetch("assets/" + humanName + "/database.json")
 
 //assign default images for head, body, feet
 function generateThumbnails(array, container, type) {
-  loadImage("assets/" + humanName + "/" + array[0].image, type, 583, 706);
+  let loadIndex = Math.round(Math.random() * (array.length-1));
+  loadImage("assets/" + humanName + "/" + array[loadIndex].image, type, 583, 706);
 
   //loop through the array
   for (let index = 0; index < array.length; index++) {
@@ -133,10 +132,24 @@ function generateThumbnails(array, container, type) {
     let image = new Image();
     image.alt = element.name;
     image.src = "assets/" + humanName + "/" + element.thumbnail;
-    image.addEventListener("click", () =>
-    {
+    image.addEventListener("click", (event) => {
+      let thumbnails = document.querySelectorAll(".thumbnail."+type);
+
+      for (let j = 0; j < thumbnails.length; j++) {
+        const element = thumbnails[j];
+        element.classList.remove("selected");
+      }
+
+      event.currentTarget.classList.add("selected");
+
       loadImage("assets/" + humanName + "/" + element.image, type, 583, 706);
     });
+    
+    image.className = "thumbnail "+ type;
+
+    if(index == loadIndex)
+      image.classList.add("selected");
+    
     container.append(image);
   }
 }
