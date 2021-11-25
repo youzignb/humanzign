@@ -41,7 +41,7 @@ function loadImage(src, type, w, h) {
     // once the request returns, parse the response and get the SVG
     let parser = new DOMParser();
     let result = parser.parseFromString(request.responseText, 'text/xml');
-    let inlineSVG = result.getElementsByTagName("svg")[0];
+    let inlineSVG = result.querySelector("svg");
     
     // add the attributes Firefox needs. These should be absolute values, not relative
     inlineSVG.setAttribute('width', w +'px');
