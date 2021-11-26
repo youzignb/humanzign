@@ -1,3 +1,6 @@
+//image export/download width
+let exportWidth = 2000;
+
 //default name is Bryan
 let humanName = "Bryan";
 
@@ -163,6 +166,25 @@ buttonDownload.addEventListener("click", download);
 function download() {
   var link = document.createElement('a');
   link.download = `${humanNameContainer.innerText}.png`;
-  link.href = canvas.toDataURL();
-  link.click();
+
+  let percent = exportWidth / canvas.width;
+
+  link.href = downloadCanvas(canvas.width * percent, canvas.height * percent);
+  link.click();  
+}
+
+function downloadCanvas(width, height) {
+  let canvasDownload = document.createElement('canvas');
+  let contextDownload = canvasDownload.getContext('2d');
+  canvasDownload.width = width;
+  canvasDownload.height = height;
+
+  // re-apply all the drawing instructions to this context
+  contextDownload.drawImage(humanzign.feet, 0, 0, width, height);
+  contextDownload.drawImage(humanzign.body, 0, 0, width, height);
+  contextDownload.drawImage(humanzign.head, 0, 0, width, height);
+  contextDownload.drawImage(humanzign.face, 0, 0, width, height);
+
+  // now export the data from this canvas
+  return canvasDownload.toDataURL();
 }
