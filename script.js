@@ -165,11 +165,11 @@ buttonDownload.addEventListener("click", download);
 
 function download() {
   var link = document.createElement('a');
-  link.download = `${humanNameContainer.innerText}.png`;
 
   let percent = exportWidth / canvas.width;
 
-  link.href = downloadCanvas(canvas.width * percent, canvas.height * percent);
+  link.setAttribute("href", downloadCanvas(canvas.width * percent, canvas.height * percent));
+  link.setAttribute("download", `${humanNameContainer.innerText}.png`);
   link.click();  
 }
 
