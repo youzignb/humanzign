@@ -113,10 +113,10 @@ fetch("assets/" + humanName + "/database.json")
 .then((response) => response.json())
 .then((json) => {
   //genetare thumbnails list
-  generateThumbnails(json.head, document.getElementById(HEAD), HEAD);
-  generateThumbnails(json.face, document.getElementById(FACE), FACE);
-  generateThumbnails(json.body, document.getElementById(BODY), BODY);
-  generateThumbnails(json.feet, document.getElementById(FEET), FEET);
+  generateThumbnails(json.head, document.getElementById(HEAD).querySelector('.itemsContainer'), HEAD);
+  generateThumbnails(json.face, document.getElementById(FACE).querySelector('.itemsContainer'), FACE);
+  generateThumbnails(json.body, document.getElementById(BODY).querySelector('.itemsContainer'), BODY);
+  generateThumbnails(json.feet, document.getElementById(FEET).querySelector('.itemsContainer'), FEET);
 })
 .catch((error) => {
   alert("This humanzign does not exist!");

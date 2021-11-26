@@ -96,6 +96,12 @@ nav a:visited {
   width: 100px;
 }
 
+.itemsContainer {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
 /* Canvas */
 #canvas {
   border: 3px double #f9f9f9;
