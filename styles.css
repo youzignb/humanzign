@@ -15,23 +15,8 @@ h2 {
   font-size: large;
 }
 
-.container {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  margin-left: auto;
-  margin-right: auto;
-  row-gap: 10px;
-  width: 1140px;
-}
-
 .thumbnail.selected {
   opacity: .2;
-}
-
-@media (max-width: 600px) {
-  .container {
-    width: 100%;
-  }
 }
 
 /* Header */
@@ -59,29 +44,28 @@ header {
 /* //Drawing area (aside + canvas) */
 main {
   display: flex;
-  padding: 20px;
-  column-gap: 100px;
-
-  /* the main includes aside and canvas */
+  justify-content: center;
+  gap: 10px;
+  padding: 30px;
+  height: 720px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   main {
     flex-direction: column-reverse;
+    height: 1500px;
+    align-items: center;
   }
-}
-
-/* Sidebar (left) */
-aside {
-  display: grid;
-  align-content: start;
-  row-gap: 30px;
 }
 
 nav {
   color: #767676;
   font-size: smaller;
+  width: max-content;
+  height: max-content;
+  padding-left: 30px;
 }
+
 nav a:link {
   color: #767676;
   text-decoration: none;
@@ -112,16 +96,10 @@ nav a:visited {
   width: 100px;
 }
 
-/* Canvas (right) */
-
+/* Canvas */
 #canvas {
   border: 3px double #f9f9f9;
   /* canvas has a width of 100% unless < 600px , will take width in html */
-}
-
-.canvas {
-  flex: 1 0 auto;
-  /* canvas grows, doesnt shrink and auto resizes */
 }
 
 /* Footer */
@@ -129,14 +107,10 @@ nav a:visited {
 footer {
   font-size: smaller;
   color: #cccccc;
-  justify-self: center;
+  text-align: center;
+  margin: 10px;
 }
 
-@media (max-width: 600px) {
-  footer {
-    justify-self: start;
-    padding-left: 20px;
-  }
-}
+
 
 /* Components (need to find a better way to show them all in a row when we have more than 3) */
