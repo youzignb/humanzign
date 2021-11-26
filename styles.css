@@ -75,6 +75,8 @@ nav a:visited {
 
 .components {
   display: grid;
+  align-items: center;
+  gap: 20px;
 }
 
 #head,
