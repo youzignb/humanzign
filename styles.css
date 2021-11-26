@@ -89,17 +89,15 @@ nav a:visited {
   white-space: nowrap;
 }
 
-#head img,
-#body img,
-#feet img,
-#face img {
-  width: 100px;
-}
-
 .itemsContainer {
   display: flex;
   align-items: start;
   gap: 10px;
+}
+
+.itemsContainer img {
+  width: auto;
+  height: 100px;
 }
 
 /* Canvas */
