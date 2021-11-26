@@ -87,6 +87,7 @@ nav a:visited {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
+  height: max-content;
 }
 
 .itemsContainer {
@@ -98,6 +99,8 @@ nav a:visited {
 .itemsContainer img {
   width: auto;
   height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Canvas */
