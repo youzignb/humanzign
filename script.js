@@ -168,7 +168,10 @@ function download() {
 
   let percent = exportWidth / canvas.width;
 
-  link.setAttribute("href", downloadCanvas(canvas.width * percent, canvas.height * percent));
+  let image = new Image();
+  image.src = downloadCanvas(canvas.width * percent, canvas.height * percent);
+
+  link.setAttribute("href", image.src);
   link.setAttribute("download", `${humanNameContainer.innerText}.png`);
   link.click();  
 }
