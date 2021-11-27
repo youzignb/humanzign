@@ -35,10 +35,17 @@ header {
   font-size: 1em;
   border-radius: 20px;
   border: none;
+  margin: 0 5px;
 }
 
 .button:hover {
   background-color: rgb(39, 39, 39);
+}
+
+#buttonRandom {
+  background-color: white;
+  color: #767676;
+  border: 1px solid #767676;
 }
 
 /* //Drawing area (aside + canvas) */

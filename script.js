@@ -191,3 +191,24 @@ function downloadCanvas(width, height) {
   // now export the data from this canvas
   return canvasDownload.toDataURL();
 }
+
+let buttonRandom = document.getElementById("buttonRandom");
+buttonRandom.addEventListener("click", () => {
+  bodyPartIndex = 0;
+  clickRandomThumbnail(HEAD);
+  clickRandomThumbnail(FACE);
+  clickRandomThumbnail(BODY);
+  clickRandomThumbnail(FEET);
+});
+
+function clickRandomThumbnail(tyle) {
+  let thumbnails = document.querySelectorAll(".thumbnail." + tyle);
+  for (let j = 0; j < thumbnails.length; j++) {
+    const element = thumbnails[j];
+    element.classList.remove("selected");
+  }
+  
+  let randomIndex = Math.round(Math.random() * (thumbnails.length-1));
+  thumbnails[randomIndex].classList.add("selected");
+  thumbnails[randomIndex].click();
+}
