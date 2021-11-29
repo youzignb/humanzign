@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#080808;}
+	.st2{clip-path:url(#SVGID_00000174583915257893622280000011060518215900423329_);}
+	.st3{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st4{clip-path:url(#SVGID_00000019651945647097726140000018342210931754407078_);}
+	.st5{fill:none;stroke:#5B2945;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st6{fill:#844F3D;}
+	.st7{fill:#4DA0FF;}
+</style>
+<g id="Calque_10">
+	<path class="st0" d="M123.5,87.7c0,3.7-3,6.8-6.8,6.8s-6.8-3-6.8-6.8H123.5z"/>
+	<path class="st0" d="M88.7,87.7c0,3.7-3,6.8-6.8,6.8s-6.8-3-6.8-6.8H88.7z"/>
+	<path class="st1" d="M86,88.3c0,2.2-1.8,4-4,4s-4-1.8-4-4c0-0.2,0-0.4,0-0.6h8C86,87.9,86,88.1,86,88.3z"/>
+	<path class="st1" d="M121,88.3c0,2.2-1.8,4-4,4s-4-1.8-4-4c0-0.2,0-0.4,0-0.6h7.9C121,87.9,121,88.1,121,88.3z"/>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="108.8" y="73.3" width="21.6" height="7.1"/>
+		</defs>
+		<clipPath id="SVGID_00000161604179722742260810000012349376505529390740_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_00000161604179722742260810000012349376505529390740_);">
+			<path class="st3" d="M109.8,74.3c9.8,0.2,19.6,5,19.6,5"/>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_00000006694618859031337400000015533354033753595304_" x="69.6" y="73.3" width="21.6" height="7.1"/>
+		</defs>
+		<clipPath id="SVGID_00000005263352126119374940000004978247921722697657_">
+			<use xlink:href="#SVGID_00000006694618859031337400000015533354033753595304_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_00000005263352126119374940000004978247921722697657_);">
+			<path class="st3" d="M90.2,74.3c-9.8,0.2-19.6,5-19.6,5"/>
+		</g>
+	</g>
+	<path class="st5" d="M88.7,126.5c3.1,0.1,7.2,0.2,11.3,0.2c4.1,0,8.1-0.1,11-0.2"/>
+	<path class="st6" d="M107.9,109.9c0,0-4.7,3.7-7.4,3.7c-2.6,0-7-3.6-7-3.6s5.4,0.7,7.2,0.7S107.9,109.9,107.9,109.9z"/>
+	<ellipse class="st7" cx="76.6" cy="98.1" rx="3.9" ry="4.4"/>
+</g>
+</svg>
