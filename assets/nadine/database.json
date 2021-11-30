@@ -49,8 +49,13 @@
       "name": "Head10",
       "thumbnail": "head/head_b-10.svg",
       "image": "head/head_a-10.svg"
-    }
+    },
+    {
+      "name": "Head11",
+      "thumbnail": "head/head_b-11.svg",
+      "image": "head/head_a-11.svg"
     
+    }
   ],
   "face": [
     {
@@ -82,13 +87,7 @@
       "name": "face",
       "thumbnail": "face/face_b-6.svg",
       "image": "face/face_a-6.svg"
-    },
-    {
-      "name": "face",
-      "thumbnail": "face/face_b-7.svg",
-      "image": "face/face_a-7.svg"
     }
-
   ],
   "body": [
     {
@@ -140,8 +139,12 @@
       "name": "Body10",
       "thumbnail": "body/body_b-10.svg",
       "image": "body/body_a-10.svg"
+    },
+    {
+      "name": "Body11",
+      "thumbnail": "body/body_b-11.svg",
+      "image": "body/body_a-11.svg"
     }
-  
   ],
   "feet": [
     {
@@ -193,6 +196,12 @@
       "name": "Feet10",
       "thumbnail": "feet/feet_b-10.svg",
       "image": "feet/feet_a-10.svg"
+    },
+    {
+      "name": "Feet12",
+      "thumbnail": "feet/feet_a-11.svg",
+      "image": "feet/feet_a-11.svg"
+    
     }
   ]
 }
