@@ -83,10 +83,16 @@
       "thumbnail": "face/face_b-5.svg",
       "image": "face/face_a-5.svg"
     },
+
     {
       "name": "face",
       "thumbnail": "face/face_b-6.svg",
       "image": "face/face_a-6.svg"
+    },
+    {
+      "name": "face",
+      "thumbnail": "face/face_b-7.svg",
+      "image": "face/face_a-7.svg"
     }
   ],
   "body": [
