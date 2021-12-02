@@ -90,7 +90,6 @@ nav a:visited {
 #face,
 #body,
 #feet {
-  overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
   height: max-content;
@@ -100,13 +99,14 @@ nav a:visited {
   display: flex;
   align-items: start;
   gap: 10px;
+  overflow-x: auto;
 }
 
 .itemsContainer img {
   width: auto;
   height: 100px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 /* Canvas */
