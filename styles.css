@@ -95,10 +95,6 @@ nav a:visited {
   height: max-content;
 }
 
-body {
-  padding-bottom: 50px;
-}
-
 .itemsContainer {
   display: flex;
   align-items: start;
