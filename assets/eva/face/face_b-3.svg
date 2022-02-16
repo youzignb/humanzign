@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 148 115.3" style="enable-background:new 0 0 148 115.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#B85D40;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;stroke:#802D31;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#AD7469;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st4{clip-path:url(#SVGID_00000031901413643503061870000006610837469456588184_);}
+	.st5{clip-path:url(#SVGID_00000012461909507139131570000006728117134859706301_);}
+	.st6{clip-path:url(#SVGID_00000004518367587210384250000002096102170461801136_);}
+	.st7{fill:none;stroke:#CDCDCD;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st8{clip-path:url(#SVGID_00000076599129451378383630000005921765166169432746_);}
+	.st9{fill:#050505;}
+</style>
+<g id="Calque_5">
+	<path class="st0" d="M80.4,71.2c0,0-4.7,3.7-7.4,3.7s-7-3.6-7-3.6s5.4,0.7,7.2,0.7S80.4,71.2,80.4,71.2z"/>
+	<ellipse class="st1" cx="54" cy="47.9" rx="6.7" ry="6.5"/>
+	<path class="st2" d="M63.5,85c0,0,5.7,4.4,9.4,3.9c2.8-0.4,9.3-4.1,9.3-4.1"/>
+	<path class="st2" d="M82.2,84.8l-9.3,2.8c-2.9,0.5-6.4-2.1-9.4-3"/>
+	<path class="st3" d="M65.7,72c0,0,5.7,3.4,7.6,3.3s7.1-3.3,7.1-3.3"/>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="81.4" y="69.9" width="7.8" height="7.9"/>
+		</defs>
+		<clipPath id="SVGID_00000112611882666767058670000002384355769009726626_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_00000112611882666767058670000002384355769009726626_);">
+			<path class="st3" d="M82.4,70.9c0,0,4.2,4.5,5.8,5.9"/>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_00000026841948911146178430000013200869457964353698_" x="57" y="69.9" width="7.8" height="7.9"/>
+		</defs>
+		<clipPath id="SVGID_00000063631278434183615860000005960119490904811685_">
+			<use xlink:href="#SVGID_00000026841948911146178430000013200869457964353698_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_00000063631278434183615860000005960119490904811685_);">
+			<path class="st3" d="M63.8,70.9c0,0-4.2,4.5-5.8,5.9"/>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_00000063624455893393013080000006676345148018321552_" x="84" y="33.5" width="20.1" height="6.4"/>
+		</defs>
+		<clipPath id="SVGID_00000156567596379878468860000010828496696669518511_">
+			<use xlink:href="#SVGID_00000063624455893393013080000006676345148018321552_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_00000156567596379878468860000010828496696669518511_);">
+			<path class="st7" d="M85,35.7c0,0,4.6-2.9,11.9,0c2.1,0.9,4.2,1.9,6.2,3.1"/>
+		</g>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_00000161603515123076944070000017825485522092471218_" x="41.6" y="33.5" width="20.1" height="6.4"/>
+		</defs>
+		<clipPath id="SVGID_00000155106528734457978780000004610163269637413532_">
+			<use xlink:href="#SVGID_00000161603515123076944070000017825485522092471218_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_00000155106528734457978780000004610163269637413532_);">
+			<path class="st7" d="M60.7,35.7c0,0-4.5-2.9-11.9,0c-2.1,0.9-4.2,1.9-6.2,3.1"/>
+		</g>
+	</g>
+	<circle class="st9" cx="54" cy="47.9" r="4.5"/>
+</g>
+<g id="Calque_3">
+	<path d="M103.2,47.6c-0.7,0.9-1.9,1.1-2.9,0.6c-1.8-1-7-1.1-9-0.5c-2.7,0.8-5.8,1.9-6.7,0.3c-0.2-0.3,1.5-2.9,6.9-3.2
+		S100.8,47.3,103.2,47.6L103.2,47.6z"/>
+</g>
+</svg>
