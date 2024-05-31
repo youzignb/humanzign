@@ -2,7 +2,10 @@ function shareImage() {
   let percent = exportWidth / canvas.width;
   let imageSrc = downloadCanvas(canvas.width * percent, canvas.height * percent);
 
-  fetch('https://hooks.zapier.com/hooks/catch/459826/2yr1adu/', {
+  // Capture the UserID from the input field
+  let userID = document.getElementById("userIDInput").value;
+
+  fetch('https://hooks.zapier.com/hooks/catch/your_zapier_webhook_url/', {
     method: 'POST',
     mode: 'no-cors',
     headers: {
@@ -11,7 +14,8 @@ function shareImage() {
     body: JSON.stringify({
       title: 'Humanzign Image',
       text: 'Check out this image I created!',
-      image: imageSrc
+      image: imageSrc,
+      userID: userID // Add UserID here
     })
   })
   .then(() => {
