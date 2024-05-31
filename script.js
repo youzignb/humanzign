@@ -18,13 +18,13 @@ function shareImage() {
           kind: 'add-row-to-table',
           tableName: 'native-table-03130a94-06b1-4dc0-95da-1d28362cabfe',
           columnValues: {
-                 "Name": “userID”,
-        "Ca9jF": “5”, // AppID
-        "6xrkR": "DezygnNative“, 
-        "7z50p": "imageSrc", // ImageURL
-        "TZdW5": “Image”, // Datatype
-        "mlPS8": “true”, //private
-        "3nVhU": “Humanzign” // Projectname
+            "Name": userID,
+            "Ca9jF": "5", // AppID
+            "6xrkR": "DezygnNative", 
+            "7z50p": imageSrc, // ImageURL
+            "TZdW5": "Image", // Datatype
+            "mlPS8": "true", // private
+            "3nVhU": "Humanzign" // Projectname
           }
         }
       ]
