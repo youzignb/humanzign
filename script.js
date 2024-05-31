@@ -5,7 +5,7 @@ function shareImage() {
   // Capture the UserID from the input field
   let userID = document.getElementById("userIDInput").value;
 
-  fetch('https://hooks.zapier.com/hooks/catch/459826/2yr1adu', {
+  fetch('https://hooks.zapier.com/hooks/catch/459826/2yr1adu/', {
     method: 'POST',
     mode: 'no-cors',
     headers: {
