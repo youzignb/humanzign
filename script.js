@@ -22,6 +22,7 @@ function shareImage() {
         "Ca9jF": “5”, // AppID
         "6xrkR": "DezygnNative“, 
         "7z50p": "imageSrc", // ImageURL
+        "TZdW5": “Image”, // Datatype
         "mlPS8": “true”, //private
         "3nVhU": “Humanzign” // Projectname
           }
