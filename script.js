@@ -1,41 +1,30 @@
-// Share button functionality
-let buttonShare = document.getElementById("buttonShare");
-buttonShare.addEventListener("click", share);
-
-function share() {
-  let userId = document.getElementById("userId").value;
-  if (!userId) {
-    alert("Please enter a User ID");
-    return;
-  }
-
+function shareImage() {
   let percent = exportWidth / canvas.width;
-  let image = new Image();
-  image.src = downloadCanvas(canvas.width * percent, canvas.height * percent);
+  let imageSrc = downloadCanvas(canvas.width * percent, canvas.height * percent);
 
-  image.onload = function() {
-    let data = {
-      userId: userId,
-      image: image.src
-    };
-
-    fetch("https://hooks.zapier.com/hooks/catch/459826/2yr1adu/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
+  fetch('https://hooks.zapier.com/hooks/catch/459826/2yr1adu/', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      title: 'Humanzign Image',
+      text: 'Check out this image I created!',
+      image: imageSrc
     })
-    .then(response => response.json())
-    .then(data => {
-      alert("Image shared successfully!");
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-      alert("Failed to share the image.");
-    });
-  };
+  })
+  .then(() => {
+    console.log('Request sent successfully');
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    alert('Failed to share the image.');
+  });
 }
+
+let buttonShare = document.getElementById("buttonShare");
+buttonShare.addEventListener("click", shareImage);
 
 //image export/download width
 let exportWidth = 2000;
