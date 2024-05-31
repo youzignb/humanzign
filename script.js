@@ -28,7 +28,13 @@ function shareImage() {
 }
 
 let buttonShare = document.getElementById("buttonShare");
-buttonShare.addEventListener("click", shareImage);
+buttonShare.addEventListener("click", function() {
+  if (confirm("Are you sure you want to share this image?")) {
+    shareImage();
+  } else {
+    console.log("Share canceled.");
+  }
+});
 
 //image export/download width
 let exportWidth = 2000;
