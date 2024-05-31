@@ -20,7 +20,7 @@ function shareImage() {
           columnValues: {
                  "Name": “userID”,
         "Ca9jF": “5”, // AppID
-        "6xrkR": "Dezygn Native“, // Title1
+        "6xrkR": "Dezygn Native“, // Title
         "TZdW5": “Image”, // Datatype
         "7z50p": "imageSrc", // ImageURL
         "mlPS8": “true”, //private
