@@ -19,7 +19,7 @@ function share() {
       image: image.src
     };
 
-    fetch("https://hooks.zapier.com/hooks/catch/your_zapier_webhook_url/", {
+    fetch("https://hooks.zapier.com/hooks/catch/459826/2yr1adu/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
