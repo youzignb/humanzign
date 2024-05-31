@@ -13,7 +13,7 @@ function shareImage() {
     },
     body: JSON.stringify({
       title: 'Humanzign Image',
-      text: 'Check out this image I created!',
+      text: 'Sharing an image',
       image: imageSrc,
       userID: userID // Add UserID here
     })
