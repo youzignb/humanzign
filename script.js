@@ -19,7 +19,8 @@ function shareImage() {
     })
   })
   .then(() => {
-    console.log('Your image has been saved');
+    console.log('Request sent successfully');
+    alert('Image saved to your Dezygn library!');
   })
   .catch((error) => {
     console.error('Error:', error);
