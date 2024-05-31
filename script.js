@@ -18,9 +18,13 @@ function shareImage() {
           kind: 'add-row-to-table',
           tableName: 'native-table-03130a94-06b1-4dc0-95da-1d28362cabfe',
           columnValues: {
-            Name: userID, // Add UserID here
-            '7z50p': imageSrc, // Add image here
-            'gFh6z': 'Humanzign image'
+                 "Name": “userID”,
+        "Ca9jF": “5”, // AppID
+        "6xrkR": "Dezygn Native“, //title1
+        "TZdW5": “Image”, // Datatype
+        "7z50p": "imageSrc", // ImageURL
+        "mlPS8": “true”, //private
+        "3nVhU": “Humanzign” // Projectname
           }
         }
       ]
