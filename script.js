@@ -19,20 +19,20 @@ function shareImage() {
     })
   })
   .then(() => {
-    console.log('Request sent successfully');
+    console.log('Your image has been saved');
   })
   .catch((error) => {
     console.error('Error:', error);
-    alert('Failed to share the image.');
+    alert('Failed to save the image.');
   });
 }
 
 let buttonShare = document.getElementById("buttonShare");
 buttonShare.addEventListener("click", function() {
-  if (confirm("Are you sure you want to share this image?")) {
+  if (confirm("Are you sure you want to save this image to your Dezygn library?")) {
     shareImage();
   } else {
-    console.log("Share canceled.");
+    console.log("Save canceled.");
   }
 });
 
