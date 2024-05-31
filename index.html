@@ -18,21 +18,24 @@
           <h1><span id="humanNameContainer">Eric</span></h1>
         </div>
         <section class="actions">
-          <button name="random" class="button" id="buttonRandom">
-            Random
-          </button>
-
-          <button name="download" class="button" id="buttonDownload">
-            Download
-          </button>
-
-          <button name="save" class="button" id="buttonSave">
-            Save
-          </button>
-        </section>
+  <input type="text" id="userIDInput" placeholder="Enter User ID" />
+  <button name="random" class="button" id="buttonRandom">
+    Random
+  </button>
+  <button name="download" class="button" id="buttonDownload">
+    Download
+  </button>
+  <button name="share" class="button" id="buttonShare">
+    Share
+  </button>
+</section>
         
       </header>
       
+      <!-- <nav>
+        <div><a href="https://app.humanzign.com/dashboard" title="Dashboard" target="_blank">Dashboard</a> → <span id="humanNameContainer">Eric</span></div>
+      </nav> -->
+
       <main>
           <div class="components">
             
@@ -61,16 +64,5 @@
             <canvas id="canvas" width="590" height="720"> </canvas>
           </div>
       </main>
-
-      <!-- Popup Modal -->
-      <div id="savePopup" class="popup">
-        <div class="popup-content">
-          <span class="close">&times;</span>
-          <h2>Save to Dezygn</h2>
-          <p>Please enter your Dezygn user ID</p>
-          <input type="text" id="dezygnUserID" class="large-input" placeholder="Enter UserID">
-          <button id="saveNowButton" class="button">Save now</button>
-        </div>
-      </div>
   </body>
 </html>
