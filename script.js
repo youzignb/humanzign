@@ -5,17 +5,25 @@ function shareImage() {
   // Capture the UserID from the input field
   let userID = document.getElementById("userIDInput").value;
 
-  fetch('https://hooks.zapier.com/hooks/catch/459826/2yr1adu/', {
+  fetch('https://api.glideapp.io/api/function/mutateTables', {
     method: 'POST',
-    mode: 'no-cors',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer fb75bb64-c005-42e1-a11f-16b900540223'
     },
     body: JSON.stringify({
-      title: 'Humanzign Image',
-      text: 'Sharing an image',
-      image: imageSrc,
-      userID: userID // Add UserID here
+      appID: 'Z6UKz4WJ28x8gEPjcAGX',
+      mutations: [
+        {
+          kind: 'add-row-to-table',
+          tableName: 'native-table-03130a94-06b1-4dc0-95da-1d28362cabfe',
+          columnValues: {
+            Name: userID, // Add UserID here
+            '7z50p': imageSrc, // Add image here
+            'gFh6z': 'Humanzign image'
+          }
+        }
+      ]
     })
   })
   .then(() => {
