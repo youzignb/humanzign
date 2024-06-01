@@ -1,3 +1,42 @@
+function shareImage() {
+  let percent = exportWidth / canvas.width;
+  let imageSrc = downloadCanvas(canvas.width * percent, canvas.height * percent);
+
+  // Capture the UserID from the input field
+  let userID = document.getElementById("userIDInput").value;
+
+  fetch('https://hooks.zapier.com/hooks/catch/459826/2yr1adu/', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      app: 'Humanzign',
+      userID: userID,
+      image: imageSrc
+  
+    })
+  })
+  .then(() => {
+    console.log('Request sent successfully');
+    alert('Image saved to your Dezygn library!');
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    alert('Failed to save the image.');
+  });
+}
+
+let buttonShare = document.getElementById("buttonShare");
+buttonShare.addEventListener("click", function() {
+  if (confirm("Are you sure you want to save this image to your Dezygn library?")) {
+    shareImage();
+  } else {
+    console.log("Save canceled.");
+  }
+});
+
 //image export/download width
 let exportWidth = 2000;
 
