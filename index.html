@@ -1,69 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Google Material Icons -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <script defer src="script.js"></script>
-    <!-- missing favicons, meta, utf spec og data and other boilerplate html5 elements -->
-    <title>Humanzign - Create</title>
-  </head>
-
-  <body>
-      <header>
-        <div class="logo">
-          <h1><span id="humanNameContainer">Eric</span></h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing with API</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #8d4cf1;
+            margin-top: 20px;
+        }
+        #container {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #canvas {
+            border: 2px solid #8d4cf1;
+            border-radius: 10px;
+        }
+        #controls {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+        #controls div {
+            margin-bottom: 10px;
+        }
+        #controls label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        #controls input, #controls select, #controls button {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Inter', sans-serif;
+        }
+        #controls button {
+            background-color: #8d4cf1;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        #controls button:hover {
+            background-color: #7136b6;
+        }
+        #fetchedImage, #refinedImage {
+            margin-left: 20px;
+            border: 2px solid #8d4cf1;
+            border-radius: 10px;
+            width: 512px;
+            height: 512px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Drawing with API</h1>
+    <div id="container">
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <div id="controls">
+            <div>
+                <label for="prompt">Prompt:</label>
+                <input type="text" id="prompt" value="a happy man">
+            </div>
+            <div>
+                <label for="style">Style:</label>
+                <select id="style">
+                    <option value="DYNAMIC">DYNAMIC</option>
+                    <option value="ARTISTIC">ARTISTIC</option>
+                    <option value="PHOTOREALISTIC">PHOTOREALISTIC</option>
+                </select>
+            </div>
+            <div>
+                <label for="strength">Strength:</label>
+                <input type="number" id="strength" value="0.4" step="0.1" min="0" max="1">
+            </div>
+            <button id="fetchData">Draw</button>
+            <button id="refineData" style="display: none;">Instant Refine</button>
+            <button id="clearCanvas">Clear Canvas</button>
         </div>
-        <section class="actions">
-  <button name="random" class="button" id="buttonRandom">
-    Random
-  </button>
-  <button name="download" class="button" id="buttonDownload">
-    Download
-  </button>
-            <input type="text" id="userIDInput" placeholder="Enter User ID to save" />
+        <img id="fetchedImage" alt="Fetched Image">
+        <img id="refinedImage" alt="Refined Image">
+    </div>
 
-  <button name="share" class="button" id="buttonShare">
-    Save
-  </button>
-</section>
-        
-      </header>
-      
-      <!-- <nav>
-        <div><a href="https://app.humanzign.com/dashboard" title="Dashboard" target="_blank">Dashboard</a> → <span id="humanNameContainer">Eric</span></div>
-      </nav> -->
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        let drawing = false;
+        let fetchedImageDataUrl = '';
 
-      <main>
-          <div class="components">
-            
-            <div id="head">
-              <h2>Head</h2>
-              <div class="itemsContainer"></div>
-            </div>
+        // Initialize the canvas with the background color
+        function setCanvasBackgroundColor(color) {
+            ctx.fillStyle = color;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
 
-            <div id="face">
-              <h2>Face</h2>
-              <div class="itemsContainer"></div>
-            </div>
+        setCanvasBackgroundColor('#ffffff'); // Default background color
 
-            <div id="body">
-              <h2>Body</h2>
-              <div class="itemsContainer"></div>
-            </div>
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mousemove', draw);
 
-            <div id="feet">
-              <h2>Feet</h2>
-              <div class="itemsContainer"></div>
-            </div>
-          </div>
+        function startDrawing(e) {
+            drawing = true;
+            draw(e);
+        }
 
-          <div class="canvasHolder">
-            <canvas id="canvas" width="590" height="720"> </canvas>
-          </div>
-      </main>
-  </body>
+        function stopDrawing() {
+            drawing = false;
+            ctx.beginPath();
+        }
+
+        function draw(e) {
+            if (!drawing) return;
+
+            ctx.lineWidth = 5;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = 'black';
+
+            ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+        }
+
+        document.getElementById('fetchData').addEventListener('click', fetchData);
+        document.getElementById('refineData').addEventListener('click', refineData);
+        document.getElementById('clearCanvas').addEventListener('click', clearCanvas);
+
+        async function fetchData() {
+            const imageDataUrl = canvas.toDataURL('image/jpeg');
+            const apiKey = 'a6290982-5a6c-4ee4-b917-1bdfadcf2632'; // Replace with your actual API key
+            const url = 'https://cloud.leonardo.ai/api/rest/v1/generations-lcm';
+
+            const prompt = document.getElementById('prompt').value;
+            const style = document.getElementById('style').value;
+            const strength = parseFloat(document.getElementById('strength').value);
+
+            const requestData = {
+                width: 512,
+                height: 512,
+                imageDataUrl: imageDataUrl,
+                prompt: prompt,
+                style: style,
+                strength: strength
+            };
+
+            console.log('Request Data:', requestData); // Log the request data for inspection
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'accept': 'application/json',
+                        'authorization': `Bearer ${apiKey}`,
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(requestData)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('Full Response Data:', data); // Log the entire response data for inspection
+
+                    // Check for the base64 image in the response
+                    if (data.lcmGenerationJob && data.lcmGenerationJob.imageDataUrl) {
+                        fetchedImageDataUrl = data.lcmGenerationJob.imageDataUrl[0]; // Use the first item in the array
+                        displayImage(fetchedImageDataUrl, 'fetchedImage');
+                        document.getElementById('refineData').style.display = 'block';
+                    } else {
+                        console.warn('No image data found in the response');
+                    }
+                } else {
+                    console.error('Failed to fetch data', response.status, response.statusText);
+                }
+            } catch (error) {
+                console.error('Error fetching data', error);
+            }
+        }
+
+        async function refineData() {
+            const apiKey = 'a6290982-5a6c-4ee4-b917-1bdfadcf2632'; // Replace with your actual API key
+            const url = 'https://cloud.leonardo.ai/api/rest/v1/lcm-instant-refine';
+
+            const prompt = document.getElementById('prompt').value;
+            const style = document.getElementById('style').value;
+            const strength = parseFloat(document.getElementById('strength').value);
+
+            const requestData = {
+                width: 512,
+                height: 512,
+                imageDataUrl: fetchedImageDataUrl, // Ensure this is a string
+                prompt: prompt,
+                style: style,
+                strength: strength
+            };
+
+            console.log('Refine Request Data:', requestData); // Log the refine request data for inspection
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'accept': 'application/json',
+                        'authorization': `Bearer ${apiKey}`,
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(requestData)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('Refine Full Response Data:', data); // Log the entire response data for inspection
+
+                    // Check for the base64 image in the response
+                    if (data.lcmGenerationJob && data.lcmGenerationJob.imageDataUrl) {
+                        const refinedImageDataUrl = data.lcmGenerationJob.imageDataUrl[0]; // Access the first item in the array
+                        displayImage(refinedImageDataUrl, 'fetchedImage'); // Update the fetched image with the refined image
+                    } else {
+                        console.warn('No image data found in the refine response');
+                    }
+                } else {
+                    console.error('Failed to fetch refine data', response.status, response.statusText);
+                }
+            } catch (error) {
+                console.error('Error fetching refine data', error);
+            }
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            setCanvasBackgroundColor('#ffffff'); // Reset to default background color
+            document.getElementById('fetchedImage').style.display = 'none';
+            document.getElementById('refinedImage').style.display = 'none';
+            document.getElementById('refineData').style.display = 'none';
+        }
+
+        function displayImage(base64Url, elementId) {
+            const img = document.getElementById(elementId);
+            img.src = base64Url;
+            img.style.display = 'block';
+        }
+    </script>
+</body>
 </html>
