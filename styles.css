@@ -1,131 +1,116 @@
-/* MAIN LAYOUT  */
-
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  /* reset styles */
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-h1 {
-  font-size: x-large;
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-h2 {
-  font-size: large;
-}
-
-.thumbnail.selected {
-  opacity: .2;
-}
-
-/* Header */
 header {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .button {
-  cursor: pointer;
-  padding: 13px 25px;
-  background-color: #111111;
-  color: white;
-  font-size: 1em;
-  border-radius: 20px;
+  background-color: #6200ea;
+  color: #ffffff;
   border: none;
-  margin: 0 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: rgb(39, 39, 39);
+  background-color: #3700b3;
 }
 
-#buttonRandom {
-  background-color: white;
-  color: #767676;
-  border: 1px solid #767676;
+#userIDInput {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
 }
 
-/* //Drawing area (aside + canvas) */
 main {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 30px;
-}
-
-@media (max-width: 1000px) {
-  main {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-}
-
-nav {
-  color: #767676;
-  font-size: smaller;
-  width: max-content;
-  height: max-content;
-  padding-left: 30px;
-}
-
-nav a:link {
-  color: #767676;
-  text-decoration: none;
-}
-
-nav a:visited {
-  color: #777;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .components {
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+  flex: 1;
 }
 
-#head,
-#face,
-#body,
-#feet {
-  overflow-y: hidden;
-  white-space: nowrap;
-  height: max-content;
+.components h2 {
+  font-size: 18px;
+  color: #6200ea;
+  margin-bottom: 10px;
 }
 
 .itemsContainer {
   display: flex;
-  align-items: start;
+  flex-wrap: wrap;
   gap: 10px;
-  overflow-x: auto;
 }
 
 .itemsContainer img {
-  width: auto;
-  height: 100px;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* Canvas */
+.itemsContainer img:hover {
+  transform: scale(1.1);
+}
+
+.canvasHolder {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
 #canvas {
-  border: 3px double #f9f9f9;
-  /* canvas has a width of 100% unless < 600px , will take width in html */
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
-
-/* Footer */
-
-footer {
-  font-size: smaller;
-  color: #cccccc;
-  text-align: center;
-  margin: 10px;
-}
-
-
-
-/* Components (need to find a better way to show them all in a row when we have more than 3) */
-
-
